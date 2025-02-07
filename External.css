@@ -1,0 +1,27 @@
+p{
+    color: green;
+}
+#bg {
+    background-color: navy;
+}
+
+.btn {
+    font-weight: bold;
+    font-size: 25px;
+    border: black;
+    font-style: italic;
+}
+ 
+#textcolor {
+    color: chocolate;
+}
+
+.btn-primary {
+    background-color:  purple;
+    color: floralwhite;
+    padding: 18px;
+    border: 2px solid grey;
+}
+h1 {
+
+}

@@ -1,0 +1,48 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centering the container */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* The container */
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+/* The box */
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    transition: transform 0.3s ease, opacity 0.3s ease, margin-left 0.3s ease;
+}
+
+/* Hover effect: Apply transform and margin-left */
+.box:hover {
+    transform: rotate(45deg) scale(1.2); /* Rotate and scale the box */
+    opacity: 0.9; /* Slightly decrease opacity */
+    margin-left: 50px; /* Move the box to the right on hover */
+}
+
+/* Hide the box on click */
+.box:active {
+    display: none; /* This hides the box on click */
+}

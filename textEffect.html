@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Effects</title>
+</head>
+<style>
+p.test1 {
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    p.test1:hover {
+        overflow: visible;
+        width: 450px;
+        border: 1px solid #000000;
+    }
+    p{
+        word-wrap: break-word;
+    }    
+p.test2 
+{
+  word-break: break-all;
+  white-space: wrap;
+    width: 200px;
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+p.test2{
+  word-break: break-all;
+}
+
+p.test1{
+    writing-mode: vertical-rl;
+}
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+</style>
+
+<body>
+    <p class="test1">This is test 1 contets and I am Kunal Nepali.</p> 
+<p class="test2">I want to add new internet at my home this week if possible.</p> 
+</body>
+</html>
+

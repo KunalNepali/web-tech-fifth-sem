@@ -1,0 +1,31 @@
+h1{
+    color: red;
+}
+h2{
+    direction: rtl;
+}
+h3{
+    letter-spacing: -3px;
+    color: #dda0dd;
+}
+
+h4{
+    letter-spacing: 0.5cm;
+    color: rgb(0, 0, 255);
+}
+
+h5{
+    text-align: center;
+    text-decoration: line-through;
+}
+
+.indent{
+    text-indent: 10%;
+}
+.trans{
+    text-transform: capitalize;
+}
+
+.space{
+    word-spacing: 1cm;
+}

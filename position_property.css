@@ -1,0 +1,31 @@
+#BF{
+     background-color: yellow;
+/*     margin: 250px 250px 250px 250px;
+     padding: 150px 150px 150px 150px;
+      text-align: center; 
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size: 12px;
+   border: ;
+   padding-top: ;
+   padding-left: ;
+   padding-right: ;
+padding-bottom: ;
+*/display: flex;
+border-radius: 25px;
+    }
+body{
+    background-color: rgb(150, 75, 75);
+}
+
+#BS
+{
+    background-color: red;
+/*    margin: 50px 50px 50px 50px;
+    padding: 55px 55px 55px 55px;
+     text-align: center;
+*/}
+.BF,.BS{
+    width: 100px;
+    height: 100px;
+    margin: 10px
+}
