@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Boxes</title>
+</head>
+<body>
+    <script>
+        class Student {
+            constructor(id, name, address, email) {
+                this.id = id;
+                this.name = name;
+                this.address = address;
+                this.email = email;
+            }
+        }
+
+        class StudentManager {
+            constructor() {
+                this.students = [
+                    new Student(1, "Kunal", "Dhapakhel", "kunaley@gmail.com"),
+                    new Student(2, "Nicksun", "Lalitpur", "nicksun@gmail.com"),
+                    new Student(3, "Leo", "Kathmandu", "leo@gmail.com")
+                ];
+            }
+
+            addStudent() {
+                const id = prompt("Enter student id: ");
+                const name = prompt("Enter the student's name: ");
+                const address = prompt("Enter student address: ");
+                const email = prompt("Enter student email: ");
+                const student = new Student(id, name, address, email);
+
+                this.students.push(student);
+            }
+
+            printStudentInfo() {
+                document.write("<h3>Students</h3>");
+                const list = document.createElement("ul");
+
+                for (const student of this.students) {
+                    list.innerHTML += `<li><strong>Id</strong>: ${student.id}</li>`;
+                    list.innerHTML += `<li><strong>Name</strong>: ${student.name}</li>`;
+                    list.innerHTML += `<li><strong>Address</strong>: ${student.address}</li>`;
+                    list.innerHTML += `<li><strong>Email</strong>: ${student.email}</li>`;
+                }
+                document.body.appendChild(list);
+            }
+        }
+
+        const studentManager = new StudentManager();
+        studentManager.addStudent();
+        studentManager.printStudentInfo();
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sale in SuperMarket</title>
+</head>
+<body>
+    <script>
+        const items = [
+            {name: "Biscuits Hide & Seek", expiry: 8},
+            {name: "Dairy Milk", expiry: 8},
+            {name: "Hershey's", expiry: 8},
+            {name: "KitKat", expiry: 8}
+        ];
+
+        document.write("Sale items are as follows: <br>");
+        for (const item of items) {
+            if (item.expiry === 8) {
+                document.write(item.name + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>
+<!--var fruits = ["apple","orange","cherry"];
+    fruits.forEach(myFunction);
+
+    function myFunction(item, index) {
+    document.getElementById("demo").innerHTML += index + "." + item + "<br>";
+    }
+-->

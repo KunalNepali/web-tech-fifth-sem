@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Boxes</title>
+</head>
+<body>
+    <script>
+        let continueloop = true;
+        do {
+            var age = prompt("Enter your age", "0");
+            if(age >= 18) {       
+                var con = confirm("Do you wish to donate blood?");
+                if(con) {
+                    alert("You are eligible to donate!!");
+                    continueloop = false;
+                }   
+            } else {
+                alert("Enter a valid age to donate blood");
+                continueloop = true;
+            }
+        } while(continueloop);
+    </script>
+</body>
+</html>
