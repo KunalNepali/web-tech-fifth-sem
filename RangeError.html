@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Catches</title>
+</head>
+<body>
+    <h1>Enter any value: </h1>
+    <input type="text" id="vid">
+    <button>Check input</button>
+    <div id="result"></div>
+</body>
+<script>
+    var btn = document.getElementsByTagName("button");
+    btn[0].onclick = function() {
+        var inval = document.getElementById("vid").value;
+        checkVal(inval);
+    }
+
+    function checkVal(value) {
+        try {
+            if (value.trim() === "") 
+                throw "EmptyException";
+            if (isNaN(value)) 
+                throw "NotANumberException";
+            if (value > 1000) 
+                throw "TooLargeException";
+            if (value < 5) 
+                throw "TooSmallException";
+
+            let numValue = Number(value);
+            let precision = 500; 
+            try {
+                let result = numValue.toPrecision(precision);
+                document.getElementById("result").innerHTML = `Valid value: ${result}`;
+            } catch (err) {
+                if (err instanceof RangeError) {
+                    throw "RangeError: " + err.message;
+                } else {
+                    throw err;
+                }
+            }
+        } catch (exception) {
+            document.getElementById("result").innerHTML = "Exception is: " + exception;
+        }
+        try {
+                encodeURI(value);
+            } catch (err) {
+                throw "URIError: " + err.message;
+            }
+    }
+</script>
+</html>

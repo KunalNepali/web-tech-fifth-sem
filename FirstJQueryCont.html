@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First JQuery Program</title>
+</head>
+<body>
+    <button>Click me</button>
+    <ul>
+        <li>First Li of First Ul</li>
+        <li>Second Li of First Ul</li>
+        <li>Third Li of First Ul</li>
+        <li>Fourth Li of First Ul</li>
+    </ul>
+    <ul>
+        <li>First Li of second Ul</li>
+        <li>Second Li of second Ul</li>
+        <li>Third Li of second Ul</li>
+        <li>Fourth Li of Second Ul</li>
+    </ul>
+    <a href="abc.com">My Website</a><br>
+    <a href="abc.com" target="_blank">My Blogs</a><br>
+    <a href="abc.com">My e-commerce website</a><br>
+    <a href="abc.com" target="_blank">My Personal Website</a><br>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function (){
+        
+                $("button").mouseenter(function () {
+                    $("ul li:first-child").css("color", "red");
+                    $("a[target!='_blank']").css("color","green");
+                });
+                ("button").mouseleave(function () {
+                    $("ul li:last-child").css("color", "red");
+                    $("a[target='_blank']").css("color","green");
+                });
+            
+            });
+        
+    </script>
+</body>
+</html>

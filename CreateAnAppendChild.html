@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create and Append Child</title>
+    </head>
+
+    <body>
+        <h2>Dynamic creatopm pf elements</h2>
+        <button onclick="createMore()" id="moreid">Add More +</button>
+        <div id="imageid"></div>
+    </body>
+    <script>
+        function createMore()
+        {
+            var buttons = document.getElementsByTagName("button").length;
+            if(buttons <= 10)
+        {
+            var divelement = document.createElement("div");
+            document.body.appendChild(divelement);
+            var newbtn = document.createElement("button");
+            newbtn.style.margin = "10px";
+            newbtn.innerText="Button" + buttons;
+            divelement.appendChild(newbtn);
+        }
+        }
+
+        function createinageTag()
+        {
+            var imgtag = document.createElement("img");
+            imgtag.setAttribute("src","D:\Kunaa_____l\web-tech\JavaScript\cars.jpg");
+            var divtag = document.getElementById("imageid");
+            divttag.appendChild(img);
+        }
+    </script>
+
+</html>

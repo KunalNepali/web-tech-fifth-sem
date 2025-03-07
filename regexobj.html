@@ -1,0 +1,18 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            let url = 'https://vedascollege.edu.np';
+
+            // Create regex obj
+            let re = new RegExp(/[^.]+/);
+
+            let result1 = re.exec(url)[0];
+            document.write(result1 + "<br>");
+
+            let result2 = url.substring(8); // Corrected this line
+            document.write(result2);
+        </script>
+    </body>
+</html>
