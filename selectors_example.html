@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selectors Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="selectors_example.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+        }
+        #box1 {
+            background-color: red;
+        }
+        .box2 {
+            background-color: blue;
+        }
+        p {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Selectors Demo</h1>
+    <button id="showElement">Show All</button>
+    <button id="hideElement">Hide All</button>
+
+    <button id="showId">Show Red Box</button>
+    <button id="hideId">Hide Red Box</button>
+
+    <button id="showClass">Show Blue Boxes</button>
+    <button id="hideClass">Hide Blue Boxes</button>
+
+    <div id="box1" class="box"></div>
+    <div class="box box2"></div>
+    <div class="box box2"></div>
+
+    <p>This is a paragraph.</p>
+</body>
+</html>
