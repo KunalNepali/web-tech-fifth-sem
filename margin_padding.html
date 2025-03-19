@@ -1,0 +1,94 @@
+_padding.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin vs Padding Demo</title>
+    <style>
+        .container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: #fff;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+        }
+
+        .padding-demo {
+            padding: 20px;
+            background-color: lightblue;
+            border: 2px solid blue;
+        }
+
+        .margin-demo {
+            margin: 20px;
+            background-color: lightgreen;
+            border: 2px solid green;
+        }
+
+        .both-demo {
+            margin: 20px;
+            padding: 20px;
+            background-color: lightyellow;
+            border: 2px solid orange;
+        }
+
+        /* Different sides demonstration */
+        .padding-sides {
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            padding-left: 40px;
+            background-color: pink;
+            border: 2px solid red;
+        }
+
+        .margin-sides {
+            margin-top: 40px;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            background-color: lightgray;
+            border: 2px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Margin vs Padding Demonstration</h1>
+
+        <h2>No Margin or Padding</h2>
+        <div class="box">Basic box without margin or padding</div>
+
+        <h2>Padding Only</h2>
+        <div class="box padding-demo">
+            This box has 20px padding, which creates space between the content and the border
+        </div>
+
+        <h2>Margin Only</h2>
+        <div class="box margin-demo">
+            This box has 20px margin, which creates space outside the border
+        </div>
+
+        <h2>Both Margin and Padding</h2>
+        <div class="box both-demo">
+            This box has both margin and padding of 20px
+        </div>
+
+        <h2>Different Sides</h2>
+        <div class="box padding-sides">
+            This box has different padding on each side
+        </div>
+
+        <div class="box margin-sides">
+            This box has different margins on each side
+        </div>
+    </div>
+</body>
+</html>

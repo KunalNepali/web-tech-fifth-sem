@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demo</title>
+    <style>
+        /* Tag Selectors */
+        h1 {
+            font-size: 32px;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 16px;
+            color: #34495e;
+        }
+
+        /* ID Selector */
+        #special-heading {
+            font-size: 28px;
+            color: #e74c3c;
+        }
+
+        #unique-paragraph {
+            font-size: 18px;
+            color: #8e44ad;
+        }
+
+        /* Class Selectors */
+        .highlight {
+            font-size: 20px;
+            color: #27ae60;
+        }
+
+        .warning {
+            font-size: 22px;
+            color: #f39c12;
+        }
+
+        /* Combining Selectors */
+        p.important {
+            font-size: 24px;
+            color: #c0392b;
+        }
+
+        div.note {
+            font-size: 14px;
+            color: #16a085;
+        }
+    </style>
+</head>
+<body>
+    <!-- Using tag selectors -->
+    <h1>Main Heading</h1>
+    <p>This is a regular paragraph.</p>
+
+    <!-- Using ID selectors -->
+    <h2 id="special-heading">Special Heading</h2>
+    <p id="unique-paragraph">This paragraph has a unique ID.</p>
+
+    <!-- Using class selectors -->
+    <div class="highlight">This div uses the highlight class.</div>
+    <p class="warning">Warning message with special formatting.</p>
+
+    <!-- Using combined selectors -->
+    <p class="important">Important paragraph with combined selector.</p>
+    <div class="note">A note with combined tag and class selector.</div>
+</body>
+</html>
