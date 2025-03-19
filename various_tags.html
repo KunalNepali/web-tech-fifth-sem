@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a demo page for HTML5 media elements">
+    <meta name="keywords" content="HTML5, audio, video, canvas">
+    <meta name="author" content="Your Name">
+    <title>Question 5 Media Elements Demo</title>
+</head>
+<body>
+    <h1>Question 4 Media and Canvas Elements</h1>
+
+    <!-- Audio Section -->
+    <h2>Audio Element</h2>
+    <audio controls>
+        <source src="D:\Kunaa_____l\web_img\q51.mp3" type="audio/mpeg">
+        <source src="D:\Kunaa_____l\web_img\q51.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+    <!-- Video Section -->
+    <h2>Video Element</h2>
+    <video width="640" height="360" controls>
+        <source src="D:\Kunaa_____l\web_img\q51.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <!-- Canvas Section -->
+    <h2>Canvas Element</h2>
+    <canvas id="myCanvas" width="400" height="200" style="border:1px solid #000000;">
+        Your browser does not support the canvas element.
+    </canvas>
+
+    <script>
+        // Basic Canvas Drawing
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        
+        // Create gradient
+        const gradient = ctx.createLinearGradient(0, 0, 400, 0);
+        gradient.addColorStop(0, "red");
+        gradient.addColorStop(1, "blue");
+        
+        // Fill rectangle with gradient
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 400, 200);
+        
+        // Add text
+        ctx.fillStyle = "white";
+        ctx.font = "30px Arial";
+        ctx.fillText("Canvas Demo", 120, 100);
+    </script>
+</body>
+</html>
