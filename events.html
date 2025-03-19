@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events Demo</title>
+</head>
+<body>
+    <h1>Question 5 HTML Events Demonstration</h1>
+
+    <!-- Form Events -->
+    <h2>Form Events</h2>
+    <input type="text" onfocus="this.style.backgroundColor='yellow'" 
+           onblur="this.style.backgroundColor='white'"
+           onchange="this.value=this.value.toUpperCase()"
+           placeholder="Type something...">
+
+    <select onchange="alert('You selected: ' + this.value)">
+        <option value="">Select an option</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+    </select>
+
+    <!-- Mouse Events -->
+    <h2>Mouse Events</h2>
+    <div style="width:200px; height:100px; background-color:lightblue; margin:10px"
+         onmouseover="this.style.backgroundColor='lightgreen'"
+         onmouseout="this.style.backgroundColor='lightblue'"
+         onclick="this.innerHTML='Clicked!'"
+         ondblclick="this.innerHTML='Double Clicked!'">
+        Hover or click me!
+    </div>
+
+    <button onclick="this.innerHTML = Date()">What's the time?</button>
+
+    <!-- Keyboard Events -->
+    <h2>Keyboard Events</h2>
+    <input type="text" 
+           onkeydown="this.style.color='red'"
+           onkeyup="this.style.color='black'"
+           onkeypress="document.getElementById('keyPress').innerHTML = 'Key pressed: ' + this.value"
+           placeholder="Type here...">
+    <p id="keyPress"></p>
+
+    <!-- Image Events -->
+    <h2>Image Events</h2>
+    <img src="https://via.placeholder.com/150" 
+         alt="Demo Image"
+         onmouseover="this.width=200"
+         onmouseout="this.width=150"
+         onclick="this.src='https://via.placeholder.com/150/ff0000/ffffff'">
+
+    <!-- Form Submit Event -->
+    <h2>Form Submit Event</h2>
+    <form onsubmit="alert('Form Submitted!'); return false;">
+        <input type="text" required placeholder="Enter name">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
