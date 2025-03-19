@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        /* CSS for styling the form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Form Validation Example</h2>
+    <form id="validationForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <span id="nameError" class="error"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <span id="emailError" class="error"></span>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+        <span id="phoneError" class="error"></span>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Enter your address">
+        <span id="addressError" class="error"></span>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="">Select your country</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="Nepal">Nepal</option>
+            <option value="India">India</option>
+            <option value="Japan">Japan</option>
+        </select>
+        <span id="countryError" class="error"></span>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // JavaScript for form validation
+        function validateForm() {
+            let isValid = true;
+
+            // Clear previous error messages
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("phoneError").textContent = "";
+            document.getElementById("addressError").textContent = "";
+            document.getElementById("countryError").textContent = "";
+
+            // Name validation
+            const name = document.getElementById("name").value;
+            if (name.trim() === "") {
+                document.getElementById("nameError").textContent = "Name is required.";
+                isValid = false;
+            }
+
+            // Email validation
+            const email = document.getElementById("email").value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.trim() === "") {
+                document.getElementById("emailError").textContent = "Email is required.";
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById("emailError").textContent = "Invalid email format.";
+                isValid = false;
+            }
+
+            // Phone number validation
+            const phone = document.getElementById("phone").value;
+            const phonePattern = /^[0-9]{10}$/;
+            if (phone.trim() === "") {
+                document.getElementById("phoneError").textContent = "Phone number is required.";
+                isValid = false;
+            } else if (!phonePattern.test(phone)) {
+                document.getElementById("phoneError").textContent = "Phone number must be 10 digits.";
+                isValid = false;
+            }
+
+            // Address validation
+            const address = document.getElementById("address").value;
+            if (address.trim() === "") {
+                document.getElementById("addressError").textContent = "Address is required.";
+                isValid = false;
+            }
+
+            // Country validation
+            const country = document.getElementById("country").value;
+            if (country === "") {
+                document.getElementById("countryError").textContent = "Country is required.";
+                isValid = false;
+            }
+
+            return isValid; // Prevent form submission if validation fails
+        }
+    </script>
+</body>
+</html>

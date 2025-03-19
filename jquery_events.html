@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Events Demo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery_events.js"></script>
+    <style>
+        #hoverBox {
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            margin: 20px;
+            text-align: center;
+            line-height: 150px;
+        }
+        #dblClickBox {
+            width: 150px;
+            height: 150px;
+            background-color: lightgreen;
+            margin: 20px;
+            text-align: center;
+            line-height: 150px;
+        }
+        input {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Events Example</h1>
+
+    <button id="clickButton">Click Me</button>
+    <div id="hoverBox">Hover Over Me</div>
+    <div id="dblClickBox">Double Click Me</div>
+    <input type="text" id="keyInput" placeholder="Type something">
+    <button id="focusButton">Click to Focus Input</button>
+
+    <p id="output"></p>
+</body>
+</html>
