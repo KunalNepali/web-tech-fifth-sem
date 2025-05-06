@@ -2,34 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Question 1 Text Formatting Tags Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Internal CSS -->
+    <style>
+        .internal-style {
+            background-color: lightblue;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        #internal-heading {
+            color: navy;
+            text-decoration: underline;
+        }
+    </style>
+    
+    <title>CSS Implementation Methods</title>
 </head>
 <body>
-    <h1>Demonstrating HTML Text Formatting Tags</h1>
+    <h1>CSS Implementation Methods</h1>
 
-    <p>This is <b>bold text</b> using the b tag.</p>
-    
-    <p>This is <i>italic text</i> using the i tag.</p>
-    
-    <p>This is <small>smaller text</small> using the small tag.</p>
-    
-    <p>Example of superscript: E = mc<sup>2</sup></p>
-    
-    <p>Example of subscript: H<sub>2</sub>O</p>
-    
-    <pre>
-This is preformatted text using the pre tag.
-    It preserves both spaces     and
-line breaks exactly as written.
-    </pre>
-    
-    This text is followed by a line break.<br>
-    This text appears on a new line.
-    
-    <p>This is a <span style="color: blue;">blue colored span</span> in a paragraph.</p>
-    
-    <p>This is <strong>very important text</strong> using the strong tag.</p>
-    
-    <p>This is <tt>teletype text</tt> using the tt tag (monospace font).</p>
+    <!-- Inline CSS -->
+    <div style="background-color: lightgreen; padding: 15px; margin: 10px; border: 2px solid green;">
+        <h2 style="color: darkgreen;">Inline CSS Example</h2>
+        <p style="font-style: italic;">This section uses inline CSS styling directly in HTML elements.</p>
+    </div>
+
+    <!-- Internal CSS -->
+    <div class="internal-style">
+        <h2 id="internal-heading">Internal CSS Example</h2>
+        <p>This section uses internal CSS defined in the style tag.</p>
+    </div>
+
+    <!-- External CSS -->
+    <div class="external-style">
+        <h2>External CSS Example</h2>
+        <p>This section uses external CSS defined in styles.css file.</p>
+    </div>
 </body>
 </html>
