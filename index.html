@@ -1,28 +1,49 @@
+
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            heading Tag Demonstration
-        </title>
-   
-<style>
-      .myDiv {
-        border: 5px outset red;
-        background-color: lightblue;
-        text-align: center;
-      }
-</style>
-  </head>
-    <body>
-        <div class = "myDiv">
-            <h1>It's first heading</h1>
-        <h2 style=" color : Yellow"> Second heading </h2>
-        <h3  style= "color:green"> Nature's color</h3>
-        <p style="color:red"> <span style = "color: red"></span>
-            <strong>Lorem ipsum</strong> dolor sit <b>amet consectetur</b>, <i>HELLOOE</i>adipisicing
-             elit. <em>THIS IS emp</em>Necessitatibus fugit,<u></u> <u>MISplesd</u> in earum 
-             sed at facilis eaque blanditiis harum sit, delectus iusto unde maiores veniam. 
-             Recusandae aspernatur minima unde delectus nihil. </p>
-        </div>
-       
-    </body>
+<head>
+    <title>AJAX XML Example</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Information</h2>
+<table id="studentTable">
+    <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Branch</th>
+        <th>CGPA</th>
+    </tr>
+</table>
+
+<script>
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "class.xml", true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const xmlDoc = xhr.responseXML;
+            const students = xmlDoc.getElementsByTagName("student");
+            const table = document.getElementById("studentTable");
+
+            for (let i = 0; i < students.length; i++) {
+                const name = students[i].getElementsByTagName("name")[0].textContent;
+                const id = students[i].getAttribute("id");
+                const branch = students[i].getElementsByTagName("branch")[0].textContent;
+                const cgpa = students[i].getElementsByTagName("cgpa")[0].textContent;
+
+                const row = table.insertRow();
+                row.innerHTML = `<td>${name}</td><td>${id}</td><td>${branch}</td><td>${cgpa}</td>`;
+            }
+        }
+    };
+    xhr.send();
+</script>
+
+</body>
 </html>
